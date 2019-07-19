@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<experiment id="exp4" version="1.3.0" component="RD180_design" partition="Design">
+  <header/>
+  <options>
+    <maximumTimeCalculation id="maxTimeCalculation" maxTime="" active="no"/>
+  </options>
+  <case id="case1" noplotted="no" description="Description" run="yes" type="standard case">
+    <steady id="steady1" description="Steady">
+      <general>
+        <caltype/>
+        <nlsolver maxfval="40000" toltype="ABSTOL" smethod="NR" maxbroyden="1000" tolerance="1e-06" maxjaceval="4000" rdigits="9" maxiter="1000000"/>
+        <stopSimulation stopBadOperation="no"/>
+        <debug level="3"/>
+        <report id="report.rpt" vars="*" alphasort="TRUE" create="yes" filterEquivalents="TRUE" type="SAVE_VARS"/>
+        <initialization value="yes"/>
+        <run value="yes"/>
+      </general>
+      <global>
+        <bounds>
+          <variable id="CombCha_1.f_O.p_c" alias="" value="24.6E6"/>
+          <variable id="CombCha_2.f_O.p_c" alias="" value="24.6E6"/>
+          <variable id="FlowMeter_2.f_in.Tt" alias="" value="489"/>
+          <variable id="FlowMeter_4.f_in.Tt" alias="" value="489"/>
+          <variable id="GasGen.OF" alias="" value="52"/>
+          <variable id="GasGen.f_O.p_c" alias="" value="53.7e6"/>
+          <variable id="Heat_exchanger.h.A" alias="" value="1"/>
+          <variable id="HighPump_LOX.f_in.W" alias="" value="935.5"/>
+          <variable id="HighPump_LOX.phi" alias="" value=".05"/>
+          <variable id="HighPump_RP1.phi" alias="" value=".05"/>
+          <variable id="Inj_F_GG.f_in.pt" alias="" value="80.9e6"/>
+          <variable id="Inj_O_GG.f_in.pt" alias="" value="60.551e6"/>
+          <variable id="Inlet_LOX.Tt" alias="" value="97"/>
+          <variable id="Inlet_LOX.pt" alias="" value="8.34e5"/>
+          <variable id="Inlet_RP1.Tt" alias="" value="290"/>
+          <variable id="Inlet_RP1.pt" alias="" value="7.45e5"/>
+          <variable id="Junction_1.f_in1.W" alias="" value="336.751"/>
+          <variable id="Junction_1.f_in1.pt" alias="" value="1.2e6"/>
+          <variable id="Junction_1.f_in2.pt" alias="" value="1.2e6"/>
+          <variable id="Junction_1.p_in1" alias="" value="1.1e6"/>
+          <variable id="Junction_2.f_in2.W" alias="" value="915"/>
+          <variable id="Junction_2.f_in2.pt" alias="" value="1.2e6"/>
+          <variable id="Junction_2.p_in1" alias="" value="1.1e6"/>
+          <variable id="LPRES.Altitude" alias="" value="0"/>
+          <variable id="LPT_LOX.f_in.Tt" alias="" value="100"/>
+          <variable id="LPT_LOX.phi" alias="" value=".05"/>
+          <variable id="LPT_LOX.rpm" alias="" value="2000"/>
+          <variable id="LPT_RP1.phi" alias="" value=".05"/>
+          <variable id="LPT_RP1.rpm" alias="" value="2000"/>
+          <variable id="LowPump_LOX.phi" alias="" value=".05"/>
+          <variable id="LowPump_RP1.phi" alias="" value=".05"/>
+          <variable id="MidPump_RP1.phi" alias="" value=".05"/>
+          <variable id="SplitFrac_2.f_in.pt" alias="" value="50.9e6"/>
+          <variable id="Turbine_ch.rpm" alias="" value="13850"/>
+        </bounds>
+        <initial>
+          <variable id="HighPump_RP1.f_in.fluid[Comb_prod_M]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="MidPump_RP1.f_in.W" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="400" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="GasGen.W_F" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="17" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="GasGen.fluid_P[H2O_vapour]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.W" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[LOX]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[NTO]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[H2O2]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[NH3]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[HNO3]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[LF2]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[RP_1]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[LCH4]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[LH2]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[N2H4]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[UDMH]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[MMH]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[JP_10]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[Kerox]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[Oil]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[H2O]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[IPA]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[Air]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[Ar]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[CH4]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[CO]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[CO2]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[H2]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[He]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[N2]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[O2]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.f_in1.fluid[MMH_vapour]" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.V_in2" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_1.V_in1" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_1.V_in2" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="Junction_2.A_in1" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="0.001" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CombCha_1.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CombCha_1.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="3" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CombCha_1.A_wet" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CombCha_2.p_out_ch" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CombCha_2.M_r" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="3" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="CombCha_2.A_wet" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="1" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_2.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="ThrustMonitor_1.M_out" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="100" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="HighPump_LOX.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="HighPump_RP1.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="LowPump_LOX.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="LowPump_RP1.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="MidPump_RP1.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="LPT_LOX.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+          <variable id="LPT_RP1.U" maxStepAbs="1.79769313e+308" alias="" dxAbs="1.5e-08" value="500" maxStepRel="1.79769313e+308" dxRel="1.5e-08"/>
+        </initial>
+        <closure>
+          <equation oper="=" toltype="ABSTOL" left="HighPump_RP1.f_in.fluid[Comb_prod_M]" right="IF (Junction_1.f_in1.fluid[Comb_prod] &lt; 0.0001 AND HighPump_RP1.f_in.fluid[Comb_prod] &lt; 0.0001) 1 ELSE (Junction_1.f_in1.fluid[Comb_prod] * Junction_1.f_in1.W + HighPump_RP1.f_in.fluid[Comb_prod] * Junction_1.f_in2.W) / (Junction_1.f_in1.fluid[Comb_prod] * Junction_1.f_in1.W / Junction_1.f_in1.fluid[Comb_prod_M] + HighPump_RP1.f_in.fluid[Comb_prod] * Junction_1.f_in2.W / HighPump_RP1.f_in.fluid[Comb_prod_M])" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LPT_RP1.tau" right="LPT_RP1.m.Power / Junction_1.f_in2.W" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="HighPump_LOX.f_in.W + Junction_1.f_in1.W" right="Junction_2.f_in1.W + SplitFrac_3.f_in.W + SplitFrac_5.f_in.W" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[LOX]" right="Junction_2.f_in1.fluid[LOX]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[NTO]" right="Junction_2.f_in1.fluid[NTO]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[H2O2]" right="Junction_2.f_in1.fluid[H2O2]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[NH3]" right="Junction_2.f_in1.fluid[NH3]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[HNO3]" right="Junction_2.f_in1.fluid[HNO3]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[LF2]" right="Junction_2.f_in1.fluid[LF2]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[RP_1]" right="Junction_2.f_in1.fluid[RP_1]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[LCH4]" right="Junction_2.f_in1.fluid[LCH4]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[LH2]" right="Junction_2.f_in1.fluid[LH2]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[N2H4]" right="Junction_2.f_in1.fluid[N2H4]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[UDMH]" right="Junction_2.f_in1.fluid[UDMH]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[MMH]" right="Junction_2.f_in1.fluid[MMH]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[JP_10]" right="Junction_2.f_in1.fluid[JP_10]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[Kerox]" right="Junction_2.f_in1.fluid[Kerox]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[Oil]" right="Junction_2.f_in1.fluid[Oil]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[H2O]" right="Junction_2.f_in1.fluid[H2O]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[IPA]" right="Junction_2.f_in1.fluid[IPA]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[Air]" right="Junction_2.f_in1.fluid[Air]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[Ar]" right="Junction_2.f_in1.fluid[Ar]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[CH4]" right="Junction_2.f_in1.fluid[CH4]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[CO]" right="Junction_2.f_in1.fluid[CO]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[CO2]" right="Junction_2.f_in1.fluid[CO2]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[H2]" right="Junction_2.f_in1.fluid[H2]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[He]" right="Junction_2.f_in1.fluid[He]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[N2]" right="Junction_2.f_in1.fluid[N2]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[O2]" right="Junction_2.f_in1.fluid[O2]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[MMH_vapour]" right="Junction_2.f_in1.fluid[MMH_vapour]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[H2O_vapour]" right="Junction_2.f_in1.fluid[H2O_vapour]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger.fluid_out[Comb_prod]" right="Junction_2.f_in1.fluid[Comb_prod]" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_2.f_in2.pt" right="Junction_2.p_in1 + 0.5 * LPRES.rho(Junction_2.f_in2.fluid) * Junction_2.V_in2 ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_1.f_in1.pt" right="Junction_1.p_in1 + 0.5 * LPRES.rho(Junction_1.f_in1.fluid) * Junction_1.V_in1 ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Junction_1.f_in2.pt" right="Junction_1.p_in1 + 0.5 * LPRES.rho(HighPump_RP1.f_in.fluid) * Junction_1.V_in2 ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Turbine_ch.alpha" right="Heat_exchanger.f_in.Tt / Turbine_ch.f_in.Tt" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.A_out / CombCha_1.A_th" right="LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / ((CombCha_1.p_out_ch / CombCha_1.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_1.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_1.g.fluid) * (1 - (CombCha_1.p_out_ch / CombCha_1.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_1.g.fluid))) / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="CombCha_1.AR_r" right="1 / CombCha_1.M_r * LPRES.FGAMMA(ThrustMonitor_1.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) * CombCha_1.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Contact_Wall_1.Q" right="Contact_Wall_1.k_w / Contact_Wall_1.t_w * (Heat_exchanger_1.h.T - CombCha_1.h.T) * Contact_Wall_1.A_wet" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_2.g.A_out / CombCha_2.A_th" right="LPRES.FGAMMA(ThrustMonitor_2.g.fluid) / ((CombCha_2.p_out_ch / CombCha_2.f_O.p_c) ** (1 / LPRES.gamma(ThrustMonitor_2.g.fluid)) * sqrt(2 * LPRES.gamma(ThrustMonitor_2.g.fluid) * (1 - (CombCha_2.p_out_ch / CombCha_2.f_O.p_c) ** ((LPRES.gamma(ThrustMonitor_2.g.fluid) - 1) / LPRES.gamma(ThrustMonitor_2.g.fluid))) / (LPRES.gamma(ThrustMonitor_2.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="CombCha_2.AR_r" right="1 / CombCha_2.M_r * LPRES.FGAMMA(ThrustMonitor_2.g.fluid) / sqrt(LPRES.gamma(ThrustMonitor_2.g.fluid)) * (1 + (LPRES.gamma(ThrustMonitor_2.g.fluid) - 1) * CombCha_2.M_r ** 2 / 2) ** ((LPRES.gamma(ThrustMonitor_2.g.fluid) + 1) / (2 * (LPRES.gamma(ThrustMonitor_2.g.fluid) - 1)))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="Heat_exchanger_2.h.Q" right="Contact_Wall_2.k_w / Contact_Wall_2.t_w * (CombCha_2.h.T - Heat_exchanger_2.h.T) * Contact_Wall_2.A_wet" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_2.g.fluid) * ThrustMonitor_2.g.Tt) / ThrustMonitor_2.g.A_out / CombCha_2.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_2.g.fluid)) * ThrustMonitor_2.M_out * (1 + (LPRES.gamma(ThrustMonitor_2.g.fluid) - 1) / 2 * ThrustMonitor_2.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_2.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_2.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="ThrustMonitor_1.g.W * sqrt(LPRES.R(ThrustMonitor_1.g.fluid) * ThrustMonitor_1.g.Tt) / ThrustMonitor_1.g.A_out / CombCha_1.f_O.p_c" right="sqrt(LPRES.gamma(ThrustMonitor_1.g.fluid)) * ThrustMonitor_1.M_out * (1 + (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1) / 2 * ThrustMonitor_1.M_out ** 2) ** (-(LPRES.gamma(ThrustMonitor_1.g.fluid) + 1) / 2 / (LPRES.gamma(ThrustMonitor_1.g.fluid) - 1))" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="HighPump_LOX.psi" right="HighPump_LOX.tau / HighPump_LOX.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="HighPump_RP1.psi" right="HighPump_RP1.tau / HighPump_RP1.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LowPump_LOX.psi" right="LowPump_LOX.tau / LowPump_LOX.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LowPump_RP1.psi" right="LowPump_RP1.tau / LowPump_RP1.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="MidPump_RP1.psi" right="MidPump_RP1.tau / MidPump_RP1.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LPT_LOX.psi" right="LPT_LOX.tau / LPT_LOX.U ** 2" internal="yes" tolerance="1e-06"/>
+          <equation oper="=" toltype="ABSTOL" left="LPT_RP1.psi" right="LPT_RP1.tau / LPT_RP1.U ** 2" internal="yes" tolerance="1e-06"/>
+        </closure>
+      </global>
+    </steady>
+    <saveState id="saveState2" description="Save State">
+      <general>
+        <run value="yes"/>
+        <initialization value="yes"/>
+        <save format="T_XML" filename="@RD180@/experiments/+r+d180_design.+design/exp4/Design.xml" filterEquiv="TRUE" category="" type="SAVE_STATE"/>
+      </general>
+    </saveState>
+  </case>
+</experiment>

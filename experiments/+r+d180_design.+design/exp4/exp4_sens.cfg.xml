@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE experiment SYSTEM "DTDFILE_FULLPATH">
+<experiment version="1.3.0">
+	<watch width="268" height="192" visible="true" pos="right">
+		<currentTab name="view"/>
+		<variables>
+			<tab name="initial">
+			</tab>
+			<tab name="inputs">
+			</tab>
+			<tab name="view">
+				<var name="RD180.initialRes[01]"/>
+				<var name="RD180.initialRes[02]"/>
+				<var name="RD180.initialRes[03]"/>
+				<var name="RD180.initialRes[04]"/>
+				<var name="RD180.initialRes[05]"/>
+				<var name="RD180.initialRes[06]"/>
+				<var name="RD180.initialRes[07]"/>
+				<var name="RD180.initialRes[08]"/>
+				<var name="RD180.initialRes[09]"/>
+				<var name="RD180.initialRes[10]"/>
+				<var name="RD180.initialRes[11]"/>
+				<var name="RD180.initialRes[12]"/>
+				<var name="RD180.initialRes[13]"/>
+				<var name="RD180.initialRes[14]"/>
+				<var name="RD180.initialRes[15]"/>
+				<var name="RD180.initialRes[16]"/>
+				<var name="RD180.initialRes[17]"/>
+				<var name="RD180.initialRes[18]"/>
+				<var name="RD180.initialRes[19]"/>
+				<var name="RD180.initialRes[20]"/>
+				<var name="RD180.initialRes[21]"/>
+				<var name="RD180.initialRes[22]"/>
+				<var name="RD180.initialRes[23]"/>
+				<var name="RD180.initialRes[24]"/>
+				<var name="RD180.initialRes[25]"/>
+				<var name="RD180.initialRes[26]"/>
+				<var name="RD180.initialRes[27]"/>
+				<var name="RD180.initialRes[28]"/>
+				<var name="RD180.initialRes[29]"/>
+				<var name="RD180.initialRes[30]"/>
+				<var name="RD180.initialRes[31]"/>
+				<var name="RD180.initialRes[32]"/>
+				<var name="RD180.initialRes[33]"/>
+				<var name="RD180.initialRes[34]"/>
+				<var name="RD180.initialRes[35]"/>
+				<var name="RD180.initialRes[36]"/>
+				<var name="RD180.initialRes[37]"/>
+				<var name="RD180.initialRes[38]"/>
+				<var name="RD180.initialRes[39]"/>
+				<var name="RD180.initialRes[40]"/>
+				<var name="RD180.initialRes[41]"/>
+				<var name="RD180.initialRes[42]"/>
+				<var name="RD180.initialRes[43]"/>
+				<var name="RD180.initialRes[44]"/>
+				<var name="RD180.initialRes[45]"/>
+				<var name="RD180.initialRes[46]"/>
+				<var name="RD180.initialRes[47]"/>
+				<var name="RD180.initialRes[48]"/>
+				<var name="RD180.initialRes[49]"/>
+				<var name="RD180.initialRes[50]"/>
+				<var name="RD180.initialRes[51]"/>
+			</tab>
+		</variables>
+		<layout>
+			<tab name="initial">
+				<column name="name" width="100"/>
+				<column name="value" width="100"/>
+				<column name="units" width="100"/>
+				<column name="category" width="100"/>
+				<column name="type" width="100"/>
+			</tab>
+			<tab name="inputs">
+				<column name="name" width="100"/>
+				<column name="value" width="100"/>
+				<column name="units" width="100"/>
+				<column name="category" width="100"/>
+				<column name="type" width="100"/>
+			</tab>
+			<tab name="view">
+				<column name="name" width="100"/>
+				<column name="value" width="100"/>
+				<column name="units" width="100"/>
+				<column name="category" width="100"/>
+			</tab>
+		</layout>
+	</watch>
+	<outputWindow height="192" width="1280" visible="true" pos="bottom" />
+	<alarms globalEnabled="TRUE">
+	</alarms>
+	<mainWindow  mode="maximized" currentTab="Res 1" />
+</experiment>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<library version="1.1.1">
+ <filedeps>
+  <file name="version.el"/>
+  <file name="RD180_design.eds"/>
+  <file name="RD180_no_fb.eds"/>
+  <file name="RD180_dp.eds"/>
+  <file name="RD180_GLLG.eds"/>
+ </filedeps>
+ <libdeps>
+  <lib name="LPRES" version=""/>
+  <lib name="MATH" version=""/>
+ </libdeps>
+ <otherdeps>
+ </otherdeps>
+</library>

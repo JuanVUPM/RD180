@@ -1,0 +1,104 @@
+ /*-----------------------------------------------------------------------------------------
+ LIBRARY: RD180
+ COMPONENT: RD180_design
+ PARTITION: Design
+ EXPERIMENT: exp2
+ TEMPLATE: STEADY
+ CREATION DATE: 28/06/2019
+-----------------------------------------------------------------------------------------*/
+
+EXPERIMENT exp2 ON RD180_design.Design
+   DECLS
+   OBJECTS
+   INIT
+      -- initial values for algebraics
+		MidPump_RP1.f_in.W = 400
+	GasGen.W_F = 17
+	GasGen.fluid_P[H2O_vapour] = 0
+	Junction_2.f_in1.W = 1
+      Junction_2.V_in2 = 1
+	Junction_1.V_in1 = 1
+	Junction_1.V_in2 = 1
+	Junction_2.A_in1 = 0.001
+	CombCha_1.p_out_ch = 100
+	CombCha_1.M_r = 3 -- initialized in component
+	CombCha_1.A_wet = 1
+	CombCha_2.p_out_ch = 100
+	CombCha_2.M_r = 3 -- initialized in component
+	CombCha_2.A_wet = 1
+	ThrustMonitor_2.M_out = 100
+	ThrustMonitor_1.M_out = 100
+	HighPump_LOX.U = 500
+	HighPump_RP1.U = 500
+	LowPump_LOX.U = 500
+	LowPump_RP1.U = 500
+	MidPump_RP1.U = 500
+	LPT_LOX.U = 500
+	LPT_RP1.U = 500
+
+   BOUNDS
+      -- Set equations for boundaries: boundVar = f(TIME;...)
+      CombCha_1.f_O.p_c = 24.6E6
+	CombCha_2.f_O.p_c = 24.6E6
+	FlowMeter_2.f_in.Tt = 489
+	FlowMeter_4.f_in.Tt = 489
+	GasGen.OF = 52
+	GasGen.f_O.p_c = 53.7e6
+	Heat_exchanger.h.A = 1
+	HighPump_LOX.f_in.W = 935.5
+	HighPump_LOX.phi = .05
+	HighPump_RP1.phi = .05
+	Inj_F_GG.f_in.pt = 80.9e6
+	Inj_O_GG.f_in.pt = 60.551e6
+	Inlet_LOX.Tt = 97
+	Inlet_LOX.pt = 8.34e5
+	Inlet_RP1.Tt = 290
+	Inlet_RP1.pt = 7.45e5
+	Junction_1.f_in1.W = 336.751
+	Junction_1.f_in1.pt = 1.2e6
+	Junction_1.f_in2.pt = 1.2e6
+	Junction_1.p_in1 = 1.1e6
+	Junction_2.f_in2.W = 915
+	Junction_2.f_in2.pt = 1.2e6
+	Junction_2.p_in1 = 1.1e6
+	LPRES.Altitude = 0
+	LPT_LOX.f_in.Tt = 100
+	LPT_LOX.phi = .05
+	LPT_LOX.rpm = 2000
+	LPT_RP1.phi = .05
+	LPT_RP1.rpm = 2000
+	LowPump_LOX.phi = .05
+	LowPump_RP1.phi = .05
+	MidPump_RP1.phi = .05
+	SplitFrac_2.f_in.pt = 50.9e6
+	Turbine_ch.rpm = 13850
+   BODY
+      -- report results in file reportAll.rpt
+      REPORT_LIST("reportAll","*",TRUE)
+
+      DEBUG_LEVEL= 3      -- Range 0..4
+      -- Settings for different actions. Valid actions are: SEV_DISABLE, SEV_NONE, SEV_WARNING, SEV_ERROR, SEV_KILLPOINT and SEV_FATALL
+      --eSetErrorAction(ERR_BAD_OPER,SEV_KILLPOINT) -- Detect bad numerical operations (eg division by zero), default is SEV_NONE, recommended is SEV_KILLPOINT
+      --eSetErrorAction(ERR_NAN_INF, SEV_KILLPOINT) -- Detect NaN or Inf values, default is SEV_NONE, recommended is SEV_KILLPOINT
+      TOLTYPE= RELTOL -- convergence criteria
+      TOLERANCE = 1e-06 -- steady solver relative tolerance 
+
+      -- Call the steady state function
+      STEADY()
+		
+		
+		REL_ERROR = 1e-08 -- transient solver relative tolerance
+      ABS_ERROR = 1e-08 -- transient solver absolute tolerance
+      TOLERANCE = 1e-08 -- steady solver relative tolerance
+      INIT_INTEG_STEP = -1 -- initial integration step size (-1 means use the solver estimation) 
+      MAX_INTEG_STEP = -1 -- maximum integration step size (-1 means use the solver estimation) 
+      NSTEPS = 1 -- Only for explicit solvers use CINT/NSTEPS as integration step size
+      REPORT_MODE = IS_EVENT -- by default it reports results at every CINT and event detection. Other valid options are IS_STEP, IS_CINT and IS_MANUAL_REFRESH 
+
+      -- simulate a transient in range[TIME,TSTOP] reporting every CINT
+      TIME = 0
+      TSTOP = 40
+      CINT = 0.1
+      INTEG()
+
+END EXPERIMENT
